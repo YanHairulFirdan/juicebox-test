@@ -7,6 +7,11 @@ Route::name('api.')->group(function () {
     Route::middleware('guest')->group(function () {
         Route::post('/register', [AuthController::class, 'register'])->name('register');
         Route::post('/login', [AuthController::class, 'login'])->name('login')->middleware('throttle:10,1');
+
+        Route::prefix('users')->name('user.')->group(function () {
+            Route::get('/', [\App\Http\Controllers\UserController::class, 'index'])->name('index');
+            Route::get('/{user}', [\App\Http\Controllers\UserController::class, 'show'])->name('show');
+        });
     });
 
     Route::middleware('auth:sanctum')->group(function () {
