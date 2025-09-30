@@ -1,0 +1,958 @@
+{
+	"info": {
+		"_postman_id": "5aab479f-645e-4c5d-bc22-210131dc2fb4",
+		"name": "Juicebox-Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35197969"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/users?search&page",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": null,
+									"description": "Keyword for searching the users by name or email"
+								},
+								{
+									"key": "page",
+									"value": null,
+									"description": "page for pagination"
+								}
+							]
+						},
+						"description": "Gets information about the authenticated user."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/users?search&page",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": null,
+											"description": "Keyword for searching the users by name or email"
+										},
+										{
+											"key": "page",
+											"value": null,
+											"description": "page for pagination"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Sep 2025 23:03:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail.com\",\n            \"created_at\": \"2025-09-29T21:37:01.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail1.com\",\n            \"created_at\": \"2025-09-29T21:38:21.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail2.com\",\n            \"created_at\": \"2025-09-29T21:38:48.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail3.com\",\n            \"created_at\": \"2025-09-29T21:39:48.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail4.com\",\n            \"created_at\": \"2025-09-29T21:42:00.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail5.com\",\n            \"created_at\": \"2025-09-29T21:42:51.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail6.com\",\n            \"created_at\": \"2025-09-29T21:44:21.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail7.com\",\n            \"created_at\": \"2025-09-29T22:19:21.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail8.com\",\n            \"created_at\": \"2025-09-29T22:25:28.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"name\": \"John Doe\",\n            \"email\": \"test@mail9.com\",\n            \"created_at\": \"2025-09-29T22:43:15.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8082/api/users?page=1\",\n        \"last\": \"http://localhost:8082/api/users?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8082/api/users?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8082/api/users\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 10\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {},
+								"requests": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/users/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "60",
+									"description": "The user's id that want to show"
+								}
+							]
+						},
+						"description": "Gets information about the authenticated user."
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/users/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6",
+											"description": "The user's id that want to show"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Sep 2025 23:03:59 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 6,\n        \"name\": \"John Doe\",\n        \"email\": \"test@mail5.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2025-09-29T21:42:51.000000Z\",\n        \"updated_at\": \"2025-09-29T21:42:51.000000Z\"\n    }\n}"
+						},
+						{
+							"name": "Not found response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/users/:id",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10303",
+											"description": "The user's id that want to show"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 06:46:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Resource not found.\",\n    \"error_code\": \"NOT_FOUND\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"test@mail6.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@mail.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"data\": {\n        \"access_token\": \"7|sPKYC31B5ViCnJLEs0P0RQ02Ln2RLXxQyzj5h5WQ82fa6edd\"\n    }\n}"
+						},
+						{
+							"name": "Unprocessable Entity Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@mail.com\",\n    \"password\": \"password\",\n    \"password_confirmation\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 30 Sep 2025 06:47:00 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The name field is required. (and 1 more error)\",\n    \"errors\": {\n        \"name\": [\n            \"The name field is required.\"\n        ],\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    },\n    \"error_code\": \"VALIDATION_ERROR\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"test@mail6.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@mail.com\",\n    \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"data\": {\n        \"access_token\": \"8|3XfbfDii77NypR9qVVjplVhx29hp5dkc3jJpJaABac8022c5\"\n    }\n}"
+						},
+						{
+							"name": "Invalid credential",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"test@mail.com\",\n    \"password\": \"password\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"message\": \"Invalid credential\",\n    \"errors\": {\n        \"email\": [\n            \"Invalid credential\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthenticated",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Sep 2025 21:54:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+						},
+						{
+							"name": "Successfully Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"logout"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Sep 2025 21:59:50 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "The `/me` endpoints let you manage information about the authenticated user."
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/api/posts?search=tempora",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "tempora",
+									"description": "Keyword for searching post by title or description"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Successful Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{base_url}}/api/posts?search=tempora",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"posts"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "tempora",
+											"description": "Keyword for searching post by title or description"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8082"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.4.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 29 Sep 2025 23:22:40 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"Illo saepe eos facere voluptas maxime fuga rem.\",\n            \"body\": \"Et architecto aspernatur corporis ipsa est. Commodi molestiae odit voluptatem officiis incidunt eveniet. Ipsum ratione est alias eos. Tempora praesentium esse ipsum qui.\",\n            \"user\": {\n                \"id\": 113,\n                \"name\": \"Mrs. Ella Collins II\",\n                \"email\": \"estel71@example.com\"\n            },\n            \"created_at\": \"2025-09-29T23:21:58.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"Minus fugit ad fugiat eum.\",\n            \"body\": \"Dignissimos totam deleniti magnam harum natus dicta ut. Pariatur officia incidunt autem sit blanditiis. Tempora distinctio illum voluptate accusantium. Facere corporis in porro rerum inventore accusantium.\",\n            \"user\": {\n                \"id\": 117,\n                \"name\": \"Dominique Schimmel\",\n                \"email\": \"bernier.mariam@example.net\"\n            },\n            \"created_at\": \"2025-09-29T23:21:58.000000Z\"\n        },\n        {\n            \"id\": 24,\n            \"title\": \"Voluptate occaecati sed corrupti id ratione fugit.\",\n            \"body\": \"Cupiditate qui et architecto explicabo tempora et quia. Nam non eaque aut in aut voluptas. Dolores aut fugit ullam dolores. Neque officiis sunt eos ipsum corrupti vel fugiat. Iusto architecto itaque itaque numquam commodi placeat itaque odio.\",\n            \"user\": {\n                \"id\": 134,\n                \"name\": \"Naomie Kshlerin\",\n                \"email\": \"koch.matt@example.net\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 25,\n            \"title\": \"Quas nam est est molestiae et quas quia.\",\n            \"body\": \"Officia tempora dolores repellendus pariatur. Qui facilis minus rerum rerum enim non. Suscipit dolor dignissimos quis quam est enim aut quibusdam.\",\n            \"user\": {\n                \"id\": 135,\n                \"name\": \"Dayton Stehr\",\n                \"email\": \"anne.mertz@example.org\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 34,\n            \"title\": \"Quia et consequatur veritatis et.\",\n            \"body\": \"Aperiam saepe ducimus eos esse ipsum sint vero. Voluptas tempora id in est aut. Est hic ea expedita sit nihil sed cum. Vel ad illo sequi in cum incidunt.\",\n            \"user\": {\n                \"id\": 144,\n                \"name\": \"Keith Hilpert\",\n                \"email\": \"jrohan@example.org\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 36,\n            \"title\": \"Praesentium laborum consequatur natus esse non neque perferendis.\",\n            \"body\": \"Dolor aut suscipit harum sed assumenda tempore tempora. Cum modi quam cupiditate quis voluptatem harum at. Doloribus nobis voluptas eum dolores. Non atque quibusdam et quia.\",\n            \"user\": {\n                \"id\": 146,\n                \"name\": \"Colby Feeney\",\n                \"email\": \"slebsack@example.com\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 37,\n            \"title\": \"Cum expedita voluptas tenetur eligendi et.\",\n            \"body\": \"Repudiandae dolorem error cum eius. Commodi sit minus laboriosam et quisquam nostrum. In et magnam expedita ullam tempora totam mollitia. Eos maiores voluptas laboriosam animi autem et.\",\n            \"user\": {\n                \"id\": 147,\n                \"name\": \"Fabiola Balistreri\",\n                \"email\": \"brown.keenan@example.com\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 39,\n            \"title\": \"In debitis quisquam recusandae fuga optio et.\",\n            \"body\": \"Totam reprehenderit veniam sed ut tenetur odit. Eos magni veniam vitae debitis in id doloremque. Voluptatem ducimus aut odio tempora tempora alias odit.\",\n            \"user\": {\n                \"id\": 149,\n                \"name\": \"Haven Douglas\",\n                \"email\": \"fred25@example.net\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 42,\n            \"title\": \"Rerum corrupti deserunt voluptatem fugiat tempora omnis cum.\",\n            \"body\": \"Molestiae qui sint aut dolores. Commodi officiis voluptatem ad ratione natus. Qui praesentium odit consequatur vero minima. Ea qui provident a dolor rerum.\",\n            \"user\": {\n                \"id\": 152,\n                \"name\": \"Joannie Corwin\",\n                \"email\": \"kbogisich@example.net\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        },\n        {\n            \"id\": 43,\n            \"title\": \"Saepe exercitationem maxime non ratione tempora magni rerum.\",\n            \"body\": \"Recusandae nesciunt voluptate sed est hic fugit quae. Dicta praesentium nisi in mollitia aliquid quos. Est qui libero debitis est modi qui harum sed.\",\n            \"user\": {\n                \"id\": 153,\n                \"name\": \"Raoul Beatty\",\n                \"email\": \"marlee.brekke@example.net\"\n            },\n            \"created_at\": \"2025-09-29T23:21:59.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost:8082/api/posts?page=1\",\n        \"last\": \"http://localhost:8082/api/posts?page=2\",\n        \"prev\": null,\n        \"next\": \"http://localhost:8082/api/posts?page=2\"\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 2,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8082/api/posts?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": \"http://localhost:8082/api/posts?page=2\",\n                \"label\": \"2\",\n                \"page\": 2,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost:8082/api/posts?page=2\",\n                \"label\": \"Next &raquo;\",\n                \"page\": 2,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost:8082/api/posts\",\n        \"per_page\": 10,\n        \"to\": 10,\n        \"total\": 16\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"title\": \"admin@mail.com\",\n   \"content\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/posts",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/posts/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"title\": \"admin@mail.com\",\n   \"content\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/posts/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"title\": \"admin@mail.com\",\n   \"content\": \"password\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/posts/:id",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"posts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "key",
+				"value": "X-API-Key",
+				"type": "string"
+			},
+			{
+				"key": "value",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://farming-simulator.pstmn.io"
+		}
+	]
+}
