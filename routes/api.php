@@ -28,4 +28,6 @@ Route::name('api.')->group(function () {
             Route::delete('/{post}', 'destroy')->name('destroy');
         });
     });
+
+    Route::get('/weather', [\App\Http\Controllers\WeatherController::class, 'show'])->name('weather.show');
 });
