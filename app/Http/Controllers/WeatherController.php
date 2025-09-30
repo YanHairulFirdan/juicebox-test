@@ -19,9 +19,9 @@ class WeatherController extends Controller
             try {
                 $weather = $weatherService->getCurrentWeather($city);
             } catch (\Throwable $th) {
-                report($th);
                 return response()->json([
-                    'error' => 'Unable to fetch weather data at this time.',
+                    'message' => 'Failed to fetch weather data.',
+                    'error' => $th->getMessage(),
                 ], 500);
             }
 
